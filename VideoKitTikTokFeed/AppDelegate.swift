@@ -1,19 +1,42 @@
 //
 //  AppDelegate.swift
-//  VideoKitCustomRecorder
+//  VideoKitTikTokFeed
 //
 //  Created by Dennis Stücken on 11/11/20.
 //
-
 import UIKit
+import VideoKitCore
+import Foundation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        NotificationCenter.default.addObserver(forName: .VKAccountStateChanged, object: self, queue: nil) { (notification) in
+            if VKSession.current.state == .connected {
+                print("VideoKit Connected.")
+            }
+        }
+        
+        let group = DispatchGroup()
+        group.enter()
+        
+        DispatchQueue.global(qos: .default).async {
+            VKSession.current.start(
+                apiToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2lkIjoiMmlUbGdDSHB4cVdSQ01LWGRSZDciLCJyb2xlIjoiYXBwIiwiaWF0IjoxNjAyMjY2NTYyLCJpc3MiOiJ2aWRlby5pbyIsImp0aSI6IjUyTnBNcFpvenA3cGxPa2dPVFFWLTBudmh6In0.8d6rhHDLSB0K1OQgUg5iEtXfkvrMr1OUmIzBppJEjxc",
+                identity: UUID().uuidString) { (sessionState, sessionData, error) in
+                group.leave()
+                
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+            }
+        }
+        
+        group.wait()
+        
         return true
     }
 

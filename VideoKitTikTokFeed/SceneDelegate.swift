@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  VideoKitCustomRecorder
+//  VideoKitTikTokFeed
 //
 //  Created by Dennis Stücken on 11/11/20.
 //
