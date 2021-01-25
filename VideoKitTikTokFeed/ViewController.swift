@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var tableNode: ASTableNode!
     var currentActiveVideoNode: VideoNode?
     var videoDataSource: FeedDataSource = AllVideosFeedDataSource()
-    var playlist = VKCustomPlaylist(videos: [])
+    var playlist = VKPlaylist(videos: [])
     var playersManager = VKPlayersManager(prerenderDistance: 3, preloadDistance: 10)
     
     override func viewDidLoad() {
@@ -112,7 +112,7 @@ extension ViewController {
             let indexPaths = (0..<videos.count).map { index in
               IndexPath(row: index, section: 0)
             }
-            playlist.add(videos: videos)
+            playlist.addVideos(videos)
             playersManager.setPlaylist(self.playlist)
             
             if indexPaths.count > 0 {

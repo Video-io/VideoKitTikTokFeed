@@ -27,7 +27,10 @@ class AllVideosFeedDataSource: FeedDataSource {
 
             if let error = error {
                 print(error.localizedDescription)
-            } else if let response = response as? VKVideosResponse {
+                return
+            }
+            
+            if let response = response {
                 if response.totalCount == 0 {
                     self?.hasMoreVideos = false
                 }

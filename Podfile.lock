@@ -34,8 +34,8 @@ PODS:
     - Texture/Core
   - Texture/Video (3.0.0):
     - Texture/Core
-  - VideoKit/Core (1.0)
-  - VideoKit/Player (1.0):
+  - VideoKit/Core (1.0.3)
+  - VideoKit/Player (1.0.3):
     - VideoKit/Core
 
 DEPENDENCIES:
@@ -55,8 +55,8 @@ SPEC CHECKSUMS:
   PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
   PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
   Texture: 2f109e937850d94d1d07232041c9c7313ccddb81
-  VideoKit: 5bd6d45df21a8f5c33d0961eb5551f83e6b68daa
+  VideoKit: dc32b96b7977a451403ff9e65168f8ad43cf030f
 
 PODFILE CHECKSUM: ffefdcd3eb1fd711391b87e7a4cc0ae5162fded2
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

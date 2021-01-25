@@ -6,6 +6,6 @@ target 'VideoKitTikTokFeed' do
   use_frameworks!
 
   # Pods for VideoKitTikTokFeed
-  pod "VideoKit/Player"
+  pod "VideoKit/Player", '1.0.3'
   pod 'Texture', '3.0.0'
 end
