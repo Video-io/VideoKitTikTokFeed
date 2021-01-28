@@ -22,7 +22,12 @@ class AllVideosFeedDataSource: FeedDataSource {
     var hasMoreVideos: Bool = true
     
     func loadNextVideos(currentPage: Int, completion: @escaping ([VKVideo]) -> Void) {
-        _ = VKVideoAPI.shared.videos(byTags: [], metadata: [:], page: currentPage, perPage: 10) { [weak self] (response, error) in
+        let filter = VKVideoFilter()
+
+        filter.page = currentPage
+        filter.limit = 10
+
+        _ = VKVideos.shared.get(byFilter: filter, sortOrder: .asc) { [weak self] (response, error) in
             guard self != nil else { return }
 
             if let error = error {

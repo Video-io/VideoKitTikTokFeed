@@ -110,8 +110,9 @@ extension ViewController {
         
         self.tableNode.performBatchUpdates({
             let indexPaths = (0..<videos.count).map { index in
-              IndexPath(row: index, section: 0)
+              IndexPath(row: playlist.count + index, section: 0)
             }
+
             playlist.addVideos(videos)
             playersManager.setPlaylist(self.playlist)
             
