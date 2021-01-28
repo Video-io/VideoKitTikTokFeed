@@ -31,7 +31,11 @@ class PlayerNode: ASDisplayNode {
         requestPlayer()
     }
     
-    override func didEnterPreloadState() {
+    override func didExitVisibleState() {
+        releasePlayer()
+    }
+    
+    override func didExitDisplayState() {
         releasePlayer()
     }
     
