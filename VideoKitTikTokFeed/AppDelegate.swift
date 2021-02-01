@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         DispatchQueue.global(qos: .default).async {
             VKSession.current.start(
-                apiToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2lkIjoiMmlUbGdDSHB4cVdSQ01LWGRSZDciLCJyb2xlIjoiYXBwIiwiaWF0IjoxNjAyMjY2NTYyLCJpc3MiOiJ2aWRlby5pbyIsImp0aSI6IjUyTnBNcFpvenA3cGxPa2dPVFFWLTBudmh6In0.8d6rhHDLSB0K1OQgUg5iEtXfkvrMr1OUmIzBppJEjxc",
+                apiToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2lkIjoiMW81cFBiVzMwNG44SXVwR2JVSm8iLCJyb2xlIjoiYXBwIiwiaWF0IjoxNjEyMTY2MzkwLCJpc3MiOiJ2aWRlby5pbyIsImp0aSI6ImZQN290S3dFb2V5U2tGNVNzQVBmLXdkaDU1In0.ebYY3nXYCyc9b8NuQZ742ejLEKsqxh0lZiK7FjtmKBM",
                 identity: UUID().uuidString) { (sessionState, sessionData, error) in
                 group.leave()
                 
