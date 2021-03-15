@@ -170,6 +170,7 @@ extension ViewController: ASTableDelegate {
     }
     
     func tableNode(_ tableNode: ASTableNode, willBeginBatchFetchWith context: ASBatchContext) {
+        print("Prefetching..")
         retrieveNextPageWithCompletion { (videos) in
             self.insertNewRowsInTableNode(videos: videos)
             context.completeBatchFetching(true)

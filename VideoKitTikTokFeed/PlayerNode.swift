@@ -23,10 +23,12 @@ class PlayerNode: ASDisplayNode {
         self.video = video
     }
     
+    /// Current visible video
     override func didEnterVisibleState() {
         requestPlayer()
     }
     
+    /// Next video after currently visible one
     override func didEnterDisplayState() {
         requestPlayer()
     }
@@ -91,7 +93,10 @@ class PlayerNode: ASDisplayNode {
     }
     
     func togglePlayback() {
-        guard let player = self.player else { return }
+        guard let player = self.player else {
+            print("Error: self.player = nil for \(video.videoID)!")
+            return
+        }
         
         player.playState == .playing ? pause() : play()
     }

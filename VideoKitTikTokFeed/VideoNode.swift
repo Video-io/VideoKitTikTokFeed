@@ -24,7 +24,7 @@ class VideoNode: ASCellNode {
         self.addSubnode(self.playerNode)
     }
     
-    func getThumbnailURL(video: VKVideo) -> URL? {
+    func getThumbnailURL() -> URL? {
         return playerNode.video.thumbnailImageURL
     }
     
@@ -34,6 +34,7 @@ class VideoNode: ASCellNode {
     
     func play() {
         playerNode.play()
+        print("Playing video \(playerNode.video.videoID)")
     }
     
     func pause() {
