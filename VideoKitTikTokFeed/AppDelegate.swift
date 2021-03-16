@@ -7,6 +7,7 @@
 import UIKit
 import VideoKitCore
 import Foundation
+import AVFoundation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        // Set audio session to enable sound if device in silent mode
+        try? AVAudioSession.sharedInstance().setCategory(.playback)
+
         let group = DispatchGroup()
         group.enter()
         

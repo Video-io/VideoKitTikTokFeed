@@ -22,6 +22,7 @@ class VideoNode: ASCellNode {
         
         super.init()
         self.addSubnode(self.playerNode)
+        self.backgroundColor = .black
     }
     
     func getThumbnailURL() -> URL? {
