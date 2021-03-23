@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1C48D627369424B1F9388606 /* Pods_VideoKitTikTokFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD09913FD21B8DD188FFFE3 /* Pods_VideoKitTikTokFeed.framework */; };
-		950D277E25C2288C00D0DBD3 /* VideoKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = 950D277D25C2288C00D0DBD3 /* VideoKitCore */; };
-		950D278025C2288C00D0DBD3 /* VideoKitPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 950D277F25C2288C00D0DBD3 /* VideoKitPlayer */; };
-		950D278225C2288C00D0DBD3 /* VideoKitRecorder in Frameworks */ = {isa = PBXBuildFile; productRef = 950D278125C2288C00D0DBD3 /* VideoKitRecorder */; };
 		9558D4C5255E10030076E8CF /* AllVideosFeedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9558D4C4255E10030076E8CF /* AllVideosFeedDataSource.swift */; };
 		9558D4D2255E15400076E8CF /* VideoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9558D4D1255E15400076E8CF /* VideoNode.swift */; };
+		9599A93526096A5C00038FD9 /* VideoKitCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9599A93426096A5C00038FD9 /* VideoKitCore */; };
+		9599A93726096A5C00038FD9 /* VideoKitPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 9599A93626096A5C00038FD9 /* VideoKitPlayer */; };
 		95BC85F9255C6511004CB3EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC85F8255C6511004CB3EE /* AppDelegate.swift */; };
 		95BC85FB255C6511004CB3EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC85FA255C6511004CB3EE /* SceneDelegate.swift */; };
 		95BC85FD255C6511004CB3EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC85FC255C6511004CB3EE /* ViewController.swift */; };
@@ -21,6 +20,19 @@
 		95BC8605255C6513004CB3EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BC8603255C6513004CB3EE /* LaunchScreen.storyboard */; };
 		95D75724255F1012005CC781 /* PlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D75723255F1012005CC781 /* PlayerNode.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		95D076C8260420530038FC24 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		180DD4FC1C67A4944C05280D /* Pods-VideoKitTikTokFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoKitTikTokFeed.release.xcconfig"; path = "Target Support Files/Pods-VideoKitTikTokFeed/Pods-VideoKitTikTokFeed.release.xcconfig"; sourceTree = "<group>"; };
@@ -44,10 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				950D278025C2288C00D0DBD3 /* VideoKitPlayer in Frameworks */,
-				950D277E25C2288C00D0DBD3 /* VideoKitCore in Frameworks */,
-				950D278225C2288C00D0DBD3 /* VideoKitRecorder in Frameworks */,
+				9599A93526096A5C00038FD9 /* VideoKitCore in Frameworks */,
 				1C48D627369424B1F9388606 /* Pods_VideoKitTikTokFeed.framework in Frameworks */,
+				9599A93726096A5C00038FD9 /* VideoKitPlayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +129,7 @@
 				95BC85F2255C6511004CB3EE /* Frameworks */,
 				95BC85F3255C6511004CB3EE /* Resources */,
 				364A395DEEA34B3A353AEAC5 /* [CP] Embed Pods Frameworks */,
+				95D076C8260420530038FC24 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,9 +137,8 @@
 			);
 			name = VideoKitTikTokFeed;
 			packageProductDependencies = (
-				950D277D25C2288C00D0DBD3 /* VideoKitCore */,
-				950D277F25C2288C00D0DBD3 /* VideoKitPlayer */,
-				950D278125C2288C00D0DBD3 /* VideoKitRecorder */,
+				9599A93426096A5C00038FD9 /* VideoKitCore */,
+				9599A93626096A5C00038FD9 /* VideoKitPlayer */,
 			);
 			productName = VideoKitTikTokFeed;
 			productReference = 95BC85F5255C6511004CB3EE /* VideoKitTikTokFeed.app */;
@@ -157,7 +168,7 @@
 			);
 			mainGroup = 95BC85EC255C6511004CB3EE;
 			packageReferences = (
-				950D277C25C2288C00D0DBD3 /* XCRemoteSwiftPackageReference "VideoKit-iOS" */,
+				9599A93326096A5C00038FD9 /* XCRemoteSwiftPackageReference "VideoKit-iOS" */,
 			);
 			productRefGroup = 95BC85F6255C6511004CB3EE /* Products */;
 			projectDirPath = "";
@@ -447,31 +458,26 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		950D277C25C2288C00D0DBD3 /* XCRemoteSwiftPackageReference "VideoKit-iOS" */ = {
+		9599A93326096A5C00038FD9 /* XCRemoteSwiftPackageReference "VideoKit-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Video-io/VideoKit-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.10;
+				minimumVersion = 1.0.11;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		950D277D25C2288C00D0DBD3 /* VideoKitCore */ = {
+		9599A93426096A5C00038FD9 /* VideoKitCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 950D277C25C2288C00D0DBD3 /* XCRemoteSwiftPackageReference "VideoKit-iOS" */;
+			package = 9599A93326096A5C00038FD9 /* XCRemoteSwiftPackageReference "VideoKit-iOS" */;
 			productName = VideoKitCore;
 		};
-		950D277F25C2288C00D0DBD3 /* VideoKitPlayer */ = {
+		9599A93626096A5C00038FD9 /* VideoKitPlayer */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 950D277C25C2288C00D0DBD3 /* XCRemoteSwiftPackageReference "VideoKit-iOS" */;
+			package = 9599A93326096A5C00038FD9 /* XCRemoteSwiftPackageReference "VideoKit-iOS" */;
 			productName = VideoKitPlayer;
-		};
-		950D278125C2288C00D0DBD3 /* VideoKitRecorder */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 950D277C25C2288C00D0DBD3 /* XCRemoteSwiftPackageReference "VideoKit-iOS" */;
-			productName = VideoKitRecorder;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
