@@ -462,8 +462,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Video-io/VideoKit-iOS";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.11;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

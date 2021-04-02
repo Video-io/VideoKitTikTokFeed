@@ -5,9 +5,9 @@
         "package": "VideoKit",
         "repositoryURL": "https://github.com/Video-io/VideoKit-iOS",
         "state": {
-          "branch": null,
-          "revision": "1c2ca53a90457f709c38ce710f2ef93443e71442",
-          "version": "1.0.11"
+          "branch": "main",
+          "revision": "4fdcde875fb29872d9519333100906dd735aa6aa",
+          "version": null
         }
       }
     ]
