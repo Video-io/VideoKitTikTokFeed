@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     var currentActiveVideoNode: VideoNode?
     var videoDataSource: FeedDataSource = AllVideosFeedDataSource()
     var playlist = VKPlaylist(videos: [])
-    var playersManager = VKPlayersManager(prerenderDistance: 3, preloadDistance: 10)
+    var playersManager = VKPlayersManager(prerenderDistance: 2, preloadDistance: 5)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         self.tableNode.allowsSelection = false
         self.tableNode.insetsLayoutMarginsFromSafeArea = true
         // Use view property instead of node until this bug is resolved (https://github.com/TextureGroup/Texture/pull/1898)
-        self.tableNode.view.leadingScreensForBatching = 5.0;
+        self.tableNode.leadingScreensForBatching = 5.0
         self.tableNode.view.contentInsetAdjustmentBehavior = .never
         
         // Add tablenodes view as a subview to current view
