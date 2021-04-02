@@ -29,7 +29,6 @@ class ViewController: UIViewController {
         self.tableNode.allowsSelection = false
         self.tableNode.insetsLayoutMarginsFromSafeArea = true
         // Use view property instead of node until this bug is resolved (https://github.com/TextureGroup/Texture/pull/1898)
-        self.tableNode.leadingScreensForBatching = 5.0
         self.tableNode.view.contentInsetAdjustmentBehavior = .never
         
         // Add tablenodes view as a subview to current view
@@ -60,6 +59,8 @@ class ViewController: UIViewController {
         if VKSession.current.state == .connected {
             tableNode.dataSource = self
         }
+        
+        self.tableNode.leadingScreensForBatching = 10.0
     }
     
     @objc func sessionStateChanged(_ notification: NSNotification? = nil) {
@@ -163,11 +164,7 @@ extension ViewController: ASTableDataSource {
 
 extension ViewController: ASTableDelegate {
     func shouldBatchFetch(for tableNode: ASTableNode) -> Bool {
-        if !videoDataSource.hasMoreVideos(currentPage: currentPage) {
-            return false
-        }
-        
-        return true
+        return videoDataSource.hasMoreVideos(currentPage: currentPage)
     }
     
     func tableNode(_ tableNode: ASTableNode, willBeginBatchFetchWith context: ASBatchContext) {
